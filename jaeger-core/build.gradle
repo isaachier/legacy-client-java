@@ -1,7 +1,7 @@
 description = 'Core library for jaeger-client'
 
 dependencies {
-    compile group: 'io.jaegertracing', name: 'jaeger-core', version: '0.30.4-SNAPSHOT'
+    compile group: 'io.jaegertracing', name: 'jaeger-core', version: '0.30.5'
     compile group: 'io.opentracing', name: 'opentracing-api', version: opentracingVersion
     compile group: 'io.opentracing', name: 'opentracing-util', version: opentracingVersion
     compile group: 'com.google.code.gson', name: 'gson', version: gsonVersion

@@ -14,9 +14,7 @@
 
 package com.uber.jaeger;
 
-import io.jaegertracing.internal.JaegerObjectFactory;
 import io.jaegertracing.internal.JaegerTracer;
-import io.jaegertracing.internal.PropagationRegistry;
 import io.jaegertracing.internal.clock.Clock;
 import io.jaegertracing.internal.metrics.Metrics;
 import io.jaegertracing.spi.BaggageRestrictionManager;

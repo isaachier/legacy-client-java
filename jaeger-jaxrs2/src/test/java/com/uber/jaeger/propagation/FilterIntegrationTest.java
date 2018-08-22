@@ -27,6 +27,7 @@ import com.uber.jaeger.filters.jaxrs2.ServerRequestCarrier;
 import com.uber.jaeger.reporters.InMemoryReporter;
 import com.uber.jaeger.samplers.ConstSampler;
 import io.jaegertracing.internal.metrics.InMemoryMetricsFactory;
+import io.jaegertracing.internal.propagation.TextMapCodec;
 import io.opentracing.SpanContext;
 import io.opentracing.Tracer;
 import io.opentracing.propagation.Format;
@@ -93,7 +94,7 @@ public class FilterIntegrationTest {
     String responseStr = resp.readEntity(String.class);
     CallTreeNode callTree = mapper.readValue(responseStr, CallTreeNode.class);
 
-    String strContext = span.context().contextAsString();
+    String strContext = TextMapCodec.contextAsString(span.context());
     String traceId = strContext.substring(0, strContext.indexOf(':'));
     boolean isSampled = true;
 
